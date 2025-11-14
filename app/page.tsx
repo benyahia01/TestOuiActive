@@ -1,6 +1,6 @@
 "use client"
 
-import { FileText, BookOpen, Sparkles, Plus, List } from "lucide-react"
+import { FileText, BookOpen, Sparkles, Plus, List, FilePlus } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -67,7 +67,7 @@ export default function HomePage() {
 
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-5 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6 text-center">Fonctionnalités</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
               <div className="flex flex-col items-center text-center gap-2 sm:gap-3">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
                   <FileText className="w-7 h-7 sm:w-8 sm:h-8 text-blue-500" />
@@ -91,6 +91,14 @@ export default function HomePage() {
                 <h4 className="font-bold text-slate-800 text-sm sm:text-base">IA intégrée</h4>
                 <p className="text-xs sm:text-sm text-slate-600">Génération intelligente de contenu</p>
               </div>
+
+              <Link href="/fiches/creer-examen" className="flex flex-col items-center text-center gap-2 sm:gap-3">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center">
+                  <FilePlus className="w-7 h-7 sm:w-8 sm:h-8 text-yellow-600" />
+                </div>
+                <h4 className="font-bold text-slate-800 text-sm sm:text-base">Créer examen</h4>
+                <p className="text-xs sm:text-sm text-slate-600">Créer et gérer des examens par matière</p>
+              </Link>
             </div>
           </div>
         </div>
